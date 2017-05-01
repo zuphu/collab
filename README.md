@@ -9,6 +9,5 @@ This project is a collaboration of different technologies and tasks for learning
 
 ### Tasks
 * Front end
-  * Boilerplate React setup
-- Back end
-  * Login page
+ * Boilerplate React setup
+
