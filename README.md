@@ -9,5 +9,9 @@ This project is a collaboration of different technologies and tasks for learning
 
 ### Tasks
 * Front end
- * Boilerplate React setup
+  * Boilerplate React setup
+  * Bootstrap CSS
 
+* Back end
+  * StrongLoop project setup
+  * Login page
