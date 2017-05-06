@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './../public/logo.png';
+import logo from './../public/favicon-circular.ico';
 import './App.css';
 
 class Clock extends React.Component {
@@ -41,7 +41,6 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>The Collab application</h2>
         </div>
         <Clock />
         <p className="App-intro">
