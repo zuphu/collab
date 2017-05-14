@@ -10,13 +10,8 @@ class LoginForm extends React.Component {
     super(props);
   }
   render() {
-    const style = {
-      textAlign: 'center',
-      display: 'inline-block',
-      padding: '50px 50px 50px 50px'
-    };
     return (
-      <Paper style={style} zDepth={1}>
+      <Paper className="Paper-style" zDepth={1}>
         <form>
           <TextField
             hintText="User name"
