@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
+import TextField from 'material-ui/TextField';
+
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -9,9 +11,17 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div>
-        Login form here
-      </div>
+      <form>
+        <TextField
+          hintText="User name"
+        /><br />
+        <TextField
+          hintText="Password Field"
+          floatingLabelText="Password"
+          type="password"
+        /><br />
+        <RaisedButton label="Login" primary={true}/>
+      </form>
     );
   }
 }
