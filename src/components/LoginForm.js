@@ -14,7 +14,8 @@ class LoginForm extends React.Component {
       <Paper className="Paper-style" zDepth={1}>
         <form>
           <TextField
-            hintText="User name"
+            floatingLabelText="User Name"
+            hintText="User Name"
           /><br />
           <TextField
             hintText="Password Field"
