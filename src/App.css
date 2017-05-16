@@ -7,6 +7,12 @@
   height: 80px;
 }
 
+.Paper-style {
+  textAlign: center;
+  display: inline-block;
+  padding: 50px 50px 50px 50px;
+}
+
 .App-header {
   text-align: left;
   background-color: rgb(69, 117, 194);
