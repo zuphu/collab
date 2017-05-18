@@ -1,0 +1,15 @@
+version: '2'
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+  mongodb:
+    image: 'bitnami/mongodb:latest'
+    networks:
+      - app-tier
+    ports:
+      - "27017:27017"
+    volumes:
+      - /data/mongodb:/bitnami/mongodb
