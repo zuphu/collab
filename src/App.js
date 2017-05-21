@@ -27,16 +27,6 @@ const fakeAuth = {
   }
 }
 
-const AuthButton = withRouter(({ history }) => (
-  fakeAuth.isAuthenticated ? (
-    <p>
-      <button onClick={() => {
-        fakeAuth.signout(() => history.push('/'))
-      }}>Sign out</button>
-    </p>
-  ) : null
-))
-
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (
     fakeAuth.isAuthenticated ? (
@@ -68,7 +58,6 @@ class App extends Component {
           <Header />
             <Router>
               <div>
-                <AuthButton/>
                 <Route path="/" component={LoginFormWithProps}/>
                 <PrivateRoute path="/protected" component={Profile}/>
               </div>
