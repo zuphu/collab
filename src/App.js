@@ -66,17 +66,13 @@ class App extends Component {
       <MuiThemeProvider>
         <div className="App">
           <Header />
-          <Clock />
-          <br />
-          
             <Router>
-              <Paper className="Paper-style" zDepth={1}>
+              <div>
                 <AuthButton/>
                 <Route path="/" component={LoginFormWithProps}/>
                 <PrivateRoute path="/protected" component={Profile}/>
-              </Paper>
+              </div>
             </Router>
-          
         </div>
       </MuiThemeProvider>
     );

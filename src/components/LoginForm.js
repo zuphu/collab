@@ -1,8 +1,12 @@
+/**
+ * This component contains the login form
+ */
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import Paper from 'material-ui/Paper';
+import Clock from './Clock';
 import {
   BrowserRouter as Router,
   Route,
@@ -14,7 +18,9 @@ class LoginForm extends React.Component {
   state = {
     redirectToReferrer: false
   }
-
+  /*
+  Event called when login clicked
+   */
   login = () => {
     this.fakeAuth.authenticate(() => {
       this.setState({ redirectToReferrer: true });
@@ -37,22 +43,28 @@ class LoginForm extends React.Component {
     }
     
     return (
-      <form>
-        <TextField
-          floatingLabelText="User Name"
-          hintText="User Name"
-        /><br />
-        <TextField
-          hintText="Password Field"
-          floatingLabelText="Password"
-          type="password"
-        /><br />
-        <RaisedButton
-          label="Login"
-          primary={true}
-          onClick={this.login}
-          />
-      </form>
+      <div>
+        <Clock />
+        <br />
+        <Paper className="Paper-style" zDepth={1}>
+          <form>
+            <TextField
+              floatingLabelText="User Name"
+              hintText="User Name"
+            /><br />
+            <TextField
+              hintText="Password Field"
+              floatingLabelText="Password"
+              type="password"
+            /><br />
+            <RaisedButton
+              label="Login"
+              primary={true}
+              onClick={this.login}
+              />
+          </form>
+        </Paper>
+      </div>
     )
   }
 }
