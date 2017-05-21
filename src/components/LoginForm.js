@@ -16,22 +16,37 @@ import {
 } from 'react-router-dom';
 class LoginForm extends React.Component {
   state = {
-    redirectToReferrer: false
+    redirectToReferrer: false,
+    userName: '',
+    password: ''
   }
   /*
   Event called when login clicked
    */
   login = () => {
-    this.fakeAuth.authenticate(() => {
+    var userInfo = {
+      userName: this.state.userName,
+      password: this.state.password
+    }
+    this.fakeAuth.authenticate(userInfo, () => {
       this.setState({ redirectToReferrer: true });
-    })
+    });
   }
-
+  userNameChange(event) {
+    this.setState({userName: event.target.value});
+  }
+  passwordChange(event) {
+    this.setState({password: event.target.value});
+  }
   constructor(props) {
     super(props);
     this.handleAuth = props.handleAuth;
     this.fakeAuth = props.fakeAuth;
+    this.userNameChange = this.userNameChange.bind(this);
+    this.passwordChange = this.passwordChange.bind(this);
+    this.login = this.login.bind(this);
   }
+
   render() {
     const { from } = this.props.location.state || { from: { pathname: '/' } }
     const { redirectToReferrer } = this.state
@@ -50,11 +65,15 @@ class LoginForm extends React.Component {
           <form>
             <TextField
               floatingLabelText="User Name"
+              value={this.state.userName}
+              onChange={this.userNameChange}
               hintText="User Name"
             /><br />
             <TextField
               hintText="Password Field"
               floatingLabelText="Password"
+              value={this.state.password}
+              onChange={this.passwordChange}
               type="password"
             /><br />
             <RaisedButton

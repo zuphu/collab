@@ -17,7 +17,8 @@ import {
 
 const fakeAuth = {
   isAuthenticated: false,
-  authenticate(cb) {
+  authenticate(userInfo, cb) {
+    console.log('Authenticating user', userInfo);
     this.isAuthenticated = true
     setTimeout(cb, 100) // fake async
   },
