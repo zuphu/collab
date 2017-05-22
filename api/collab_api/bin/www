@@ -7,6 +7,8 @@
 var app = require('../app');
 var debug = require('debug')('collab-api:server');
 var http = require('http');
+var colors = require('colors');
+var mongoose = require('mongoose');
 
 /**
  * Get port from environment and store in Express.
@@ -86,14 +88,14 @@ function onListening() {
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
     : 'port ' + addr.port;
-  debug('  /$$$$$$  /$$$$$$$  /$$$$$$');
-  debug(' /$$__  $$| $$__  $$|_  $$_/');
-  debug('| $$  \ $$| $$  \ $$  | $$  ');
-  debug('| $$$$$$$$| $$$$$$$/  | $$  ');
-  debug('| $$__  $$| $$____/   | $$  ');
-  debug('| $$  | $$| $$        | $$  ');
-  debug('| $$  | $$| $$       /$$$$$$');
-  debug('|__/  |__/|__/      |______/');
+  debug('  /$$$$$$  /$$$$$$$  /$$$$$$'.cyan);
+  debug(' /$$__  $$| $$__  $$|_  $$_/'.cyan);
+  debug('| $$  \ $$| $$  \ $$  | $$  '.cyan);
+  debug('| $$$$$$$$| $$$$$$$/  | $$  '.cyan);
+  debug('| $$__  $$| $$____/   | $$  '.cyan);
+  debug('| $$  | $$| $$        | $$  '.cyan);
+  debug('| $$  | $$| $$       /$$$$$$'.cyan);
+  debug('|__/  |__/|__/      |______/'.cyan);
                             
   debug('Listening on ' + bind);
 }
