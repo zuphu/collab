@@ -13,5 +13,6 @@ This project is a collaboration of different technologies and tasks for learning
   * Bootstrap CSS
 
 * Back end
-  * StrongLoop project setup
+  * Express
+  * Authentication
   * Login page
