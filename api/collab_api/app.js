@@ -15,12 +15,13 @@ var index = require('./routes/index.js');
 var users = require('./routes/users.js');
 var logout = require('./routes/logout.js');
 var login = require('./routes/login.js');
-
 var app = express();
+
+require('./config/passport')(passport); // pass passport for configuration
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views')); 
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -38,6 +39,8 @@ app.use(flash());
 
 debug(configDB);
 mongoose.connect(configDB.url); // connect to our database
+
+
 
 app.use('/', index);
 app.use('/users', users);
