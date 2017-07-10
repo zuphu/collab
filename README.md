@@ -15,3 +15,4 @@ This project is a collaboration of different technologies and tasks for learning
   * Express
   * Authentication
   * Login page
+  * API
