@@ -15,9 +15,11 @@ var index = require('./routes/index.js');
 var users = require('./routes/users.js');
 var logout = require('./routes/logout.js');
 var login = require('./routes/login.js');
+var signup = require('./routes/signup.js');
+var profile = require('./routes/profile.js');
 var app = express();
 
-require('./config/passport')(passport); // pass passport for configuration
+require('./config/passport.js')(passport); // pass passport for configuration
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views')); 
@@ -40,12 +42,12 @@ app.use(flash());
 debug(configDB);
 mongoose.connect(configDB.url); // connect to our database
 
-
-
 app.use('/', index);
 app.use('/users', users);
 app.use('/login', login);
 app.use('/logout', logout);
+app.use('/signup', signup);
+app.use('/profile', profile);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
