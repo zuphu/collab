@@ -5,7 +5,7 @@ var debug = require('debug')('collab-api:index.js');
 var passport = require('passport');
 
 router.get('/', function(req, res) {
-  res.render('signup');
+  res.render('signup', { message: req.flash('signupMessage') });
 });
 
 // process the signup form
