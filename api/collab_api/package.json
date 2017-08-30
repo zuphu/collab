@@ -20,7 +20,6 @@
     "express": "~4.15.2",
     "express-debug": "^1.1.1",
     "express-session": "^1.15.3",
-    "flash": "^1.1.0",
     "jade": "~1.11.0",
     "mongoose": "^4.10.0",
     "morgan": "~1.8.1",
