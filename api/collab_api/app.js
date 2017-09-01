@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
-var flash = require('flash');
+var flash = require('connect-flash');
 var session = require('express-session');
 var configDB = require('./config/database.js');
 
