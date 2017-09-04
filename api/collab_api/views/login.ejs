@@ -19,6 +19,11 @@
     <!-- show any messages that come back with authentication -->
     <!-- <div class="alert alert-danger">sign up errors go here</div> -->
 
+    <!-- show any messages that come back with authentication -->
+    <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+
     <!-- LOGIN FORM -->
     <form action="/login" method="post">
         <div class="form-group">
