@@ -39,7 +39,6 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-debug(configDB);
 mongoose.connect(configDB.url); // connect to our database
 
 app.use('/', index);
