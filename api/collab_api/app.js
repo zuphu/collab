@@ -11,12 +11,14 @@ var flash = require('connect-flash');
 var session = require('express-session');
 var configDB = require('./config/database.js');
 
+//routes
 var index = require('./routes/index.js');
 var users = require('./routes/users.js');
 var logout = require('./routes/logout.js');
 var login = require('./routes/login.js');
 var signup = require('./routes/signup.js');
 var profile = require('./routes/profile.js');
+var logout = require('./routes/logout.js');
 var app = express();
 
 require('./config/passport.js')(passport); // pass passport for configuration
@@ -47,6 +49,7 @@ app.use('/login', login);
 app.use('/logout', logout);
 app.use('/signup', signup);
 app.use('/profile', profile);
+app.use('/logout', logout);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
