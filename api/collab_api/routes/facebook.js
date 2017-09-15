@@ -1,14 +1,18 @@
 var express = require('express');
 var router = express.Router();
+var passport = require('passport');
 
 /* GET home page. */
-app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+router.get('/auth/facebook', function() {
+  console.log('sup');
+},
+passport.authenticate('facebook', { scope : 'email' }));
 
 // handle the callback after facebook has authenticated the user
-app.get('/auth/facebook/callback',
-passport.authenticate('facebook', {
-    successRedirect : '/profile',
-    failureRedirect : '/'
+router.get('/auth/facebook/callback',
+  passport.authenticate('facebook', {
+      successRedirect : '/profile',
+      failureRedirect : '/'
 }));
 
 
