@@ -19,6 +19,7 @@ var login = require('./routes/login.js');
 var signup = require('./routes/signup.js');
 var profile = require('./routes/profile.js');
 var logout = require('./routes/logout.js');
+var facebook = require('./routes/facebook.js');
 var app = express();
 
 require('./config/passport.js')(passport); // pass passport for configuration
@@ -50,6 +51,7 @@ app.use('/logout', logout);
 app.use('/signup', signup);
 app.use('/profile', profile);
 app.use('/logout', logout);
+app.use('/facebook', facebook);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
