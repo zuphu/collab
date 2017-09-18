@@ -45,13 +45,13 @@ app.use(flash());
 mongoose.connect(configDB.url); // connect to our database
 
 app.use('/', index);
+app.use('/', facebook);
 app.use('/users', users);
 app.use('/login', login);
 app.use('/logout', logout);
 app.use('/signup', signup);
 app.use('/profile', profile);
 app.use('/logout', logout);
-app.use('/facebook', facebook);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
