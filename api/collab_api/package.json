@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "api": "DEBUG=collab-api:* npm start",
-    "api_dev": "DEBUG=collab-api:* nodemon ./bin/www"
+    "api_dev": "DEBUG=collab-api:* nodemon ./bin/www",
+    "db_connect": "./scripts/connect_to_db.sh"
   },
   "dependencies": {
     "async": "^2.5.0",
