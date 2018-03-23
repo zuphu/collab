@@ -1,5 +1,7 @@
 # collab
 ## What is this?
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/zuphu/collab.svg)](https://greenkeeper.io/)
 This project is a collaboration of different technologies and tasks for learning and experimenting purposes.
 
 ### Tech
